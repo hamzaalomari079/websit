@@ -251,23 +251,6 @@ header.scrolled {
   transition: all var(--transition-normal);
 }
 
-.page-cover-section {
-  padding-top: 2rem;
-}
-
-.page-cover {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-}
-
-.page-cover img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  display: block;
-}
-
 .cta-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
@@ -702,9 +685,6 @@ footer {
     height: 400px;
   }
 
-  .page-cover img {
-    height: 360px;
-  }
   
   .hero-content h1 {
     font-size: 2rem;
@@ -755,9 +735,6 @@ footer {
     height: 300px;
   }
 
-  .page-cover img {
-    height: 260px;
-  }
   
   .hero-content {
     padding: 0 1rem;
