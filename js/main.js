@@ -48,7 +48,7 @@ function contactValidation() {
 
     if (success) {
       success.style.display = "block";
-      success.textContent = "تم إرسال طلبك بنجاح (تجريبيًا).";
+      success.textContent = "تم ارسال طلبك بنجاح وسيتم التواصل معك قريبا.";
     }
 
     form.reset();
