@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تواصل | Loving Homes</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">تخطي إلى المحتوى</a>
+
+<header> <div class="container"><div class="navbar">
+  <a class="brand" href="index.html">
+    <img src="../images/logo.png" alt="شعار Loving Homes" />
+    <span><span class="title">Loving Homes</span><span class="sub">Pet Hotel • Hong Kong</span></span>
+  </a>
+  <nav class="nav-links" id="navLinks" aria-label="التنقل الرئيسي">
+    <a href="index.html">الرئيسية</a><a href="about.html">من نحن</a><a href="facilities.html">المرافق</a><a href="packages.html">الحزم</a>
+    <a href="gallery.html">المعرض</a><a href="faq.html">الأسئلة/نصائح</a><a href="reviews.html">التقييمات</a><a href="policies.html">السياسات</a>
+    <a href="contact.html">تواصل</a><a href="booking.html">طلب حجز</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="btn menu-btn" id="menuBtn" aria-controls="navLinks" aria-expanded="false">القائمة</button>
+    <a class="btn primary" href="booking.html">احجز الآن</a>
+  </div>
+</div></div></header>
+
+<main id="main">
+  <section class="section">
+    <div class="container">
+      <h2>تواصل معنا</h2>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>نموذج الاستفسار</h3>
+          <div class="success-msg" id="successMsg" role="status" aria-live="polite"></div>
+          <div class="error" id="formError" role="alert"></div>
+
+          <form class="form" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">الاسم</label>
+              <input id="name" type="text" required placeholder="اسمك" />
+            </div>
+
+            <div class="field">
+              <label for="email">البريد الإلكتروني</label>
+              <input id="email" type="email" required placeholder="name@example.com" />
+            </div>
+
+            <div class="field">
+              <label for="message">الرسالة</label>
+              <textarea id="message" required placeholder="اكتب استفسارك..."></textarea>
+              <div class="help">الرسالة يجب أن تكون 10 أحرف على الأقل.</div>
+            </div>
+
+            <button class="btn success" type="submit">إرسال</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3>بيانات التواصل (نموذجية)</h3>
+          <ul class="list">
+            <li>الهاتف: +852 0000 0000</li>
+            <li>البريد: info@lovinghomes.hk</li>
+            <li>المدينة: Hong Kong</li>
+          </ul>
+          <p class="notice" style="margin-top:10px">عند التحسين لاحقًا يمكن إضافة خريطة أو ساعات عمل.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="container"><div class="two-col">
+  <div><strong>Loving Homes</strong><div class="help">Hong Kong • Pet Hotel</div></div>
+  <div style="text-align:left"><span class="help">© 2026 Loving Homes — نموذج تعليمي</span></div>
+</div></div></footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

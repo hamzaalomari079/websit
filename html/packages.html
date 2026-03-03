@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>الحزم | Loving Homes</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">تخطي إلى المحتوى</a>
+
+<header> <div class="container"><div class="navbar">
+  <a class="brand" href="index.html">
+    <img src="../images/logo.png" alt="شعار Loving Homes" />
+    <span><span class="title">Loving Homes</span><span class="sub">Pet Hotel • Hong Kong</span></span>
+  </a>
+  <nav class="nav-links" id="navLinks" aria-label="التنقل الرئيسي">
+    <a href="index.html">الرئيسية</a><a href="about.html">من نحن</a><a href="facilities.html">المرافق</a><a href="packages.html">الحزم</a>
+    <a href="gallery.html">المعرض</a><a href="faq.html">الأسئلة/نصائح</a><a href="reviews.html">التقييمات</a><a href="policies.html">السياسات</a>
+    <a href="contact.html">تواصل</a><a href="booking.html">طلب حجز</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="btn menu-btn" id="menuBtn" aria-controls="navLinks" aria-expanded="false">القائمة</button>
+    <a class="btn primary" href="booking.html">احجز الآن</a>
+  </div>
+</div></div></header>
+
+<main id="main">
+  <section class="section">
+    <div class="container">
+      <h2>الحزم</h2>
+      <div class="card" style="margin-bottom:12px">
+        <label for="packageFilter">تصفية الحزم</label>
+        <select id="packageFilter">
+          <option value="all">عرض الكل</option>
+          <option value="premium">المميزة</option>
+          <option value="classic">الكلاسيكية</option>
+          <option value="day">حزمة اليوم</option>
+        </select>
+        <div class="help">فلتر بسيط باستخدام JavaScript.</div>
+      </div>
+
+      <div class="grid">
+        <div class="card pkg-card" data-type="premium">
+          <h3>الحزمة المميزة</h3>
+          <ul class="list">
+            <li>أنشطة أكثر + تحديثات يومية</li>
+            <li>اهتمام إضافي حسب الترتيب</li>
+          </ul>
+          <a class="btn success" href="booking.html">اطلب هذه الحزمة</a>
+        </div>
+
+        <div class="card pkg-card" data-type="classic">
+          <h3>الحزمة الكلاسيكية</h3>
+          <ul class="list">
+            <li>توازن بين النشاط والراحة</li>
+            <li>عناية/تنظيف حسب الجدول</li>
+          </ul>
+          <a class="btn success" href="booking.html">اطلب هذه الحزمة</a>
+        </div>
+
+        <div class="card pkg-card" data-type="day">
+          <h3>حزمة اليوم</h3>
+          <ul class="list">
+            <li>مناسبة للزيارات القصيرة</li>
+            <li>نشاط أساسي ومتابعة</li>
+          </ul>
+          <a class="btn success" href="booking.html">اطلب هذه الحزمة</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="container"><div class="two-col">
+  <div><strong>Loving Homes</strong><div class="help">Hong Kong • Pet Hotel</div></div>
+  <div style="text-align:left"><span class="help">© 2026 Loving Homes — نموذج تعليمي</span></div>
+</div></div></footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
