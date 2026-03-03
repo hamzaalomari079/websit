@@ -701,6 +701,10 @@ footer {
   .hero {
     height: 400px;
   }
+
+  .page-cover img {
+    height: 360px;
+  }
   
   .hero-content h1 {
     font-size: 2rem;
@@ -749,6 +753,10 @@ footer {
   
   .hero {
     height: 300px;
+  }
+
+  .page-cover img {
+    height: 260px;
   }
   
   .hero-content {
