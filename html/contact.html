@@ -3,13 +3,15 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>التواصل - Sunrise Pet Resort</title>
+ <title>التواصل - Loving Homes</title>
  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
  <header>
   <nav class="navbar">
-   <a href="index.html" class="logo"><span>Sunrise Pet Resort</span></a>
+   <a href="index.html" class="logo">
+    <img src="../images/logo.png" alt="Loving Homes Logo" class="site-logo">
+    <span>Loving Homes</span></a>
    <ul class="nav-links">
     <li><a href="index.html">الرئيسية</a></li>
     <li><a href="about.html">من نحن</a></li>
@@ -26,17 +28,25 @@
   </nav>
  </header>
 
+ <section class="section page-cover-section">
+  <div class="container">
+   <div class="page-cover">
+    <img src="../images/contact-main.jpg" alt="صورة صفحة contact" loading="lazy">
+   </div>
+  </div>
+ </section>
+
  <section class="hero" style="background: linear-gradient(135deg, #0EA5A4 0%, #14B8A6 100%); display: flex; align-items: center;">
   <div class="hero-content" style="color: white;">
    <h1>تواصل معنا</h1>
-   <p>نحن هنا للإجابة على جميع أسئلتك والمساعدة في حجز حيوانك الأليف</p>
+   <p>نحن هنا للإجابة على جميع أسئلتك والمساعدة في حجز اقامة كلبك</p>
   </div>
  </section>
 
  <section class="section">
   <div class="container">
    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
-    <!-- Contact Form -->
+    
     <div>
      <h2>نموذج الحجز</h2>
      <form id="contactForm" action="https://formspree.io/f/xlgwyaba" method="POST">
@@ -56,18 +66,18 @@
       </div>
 
       <div class="form-group">
-       <label>اسم حيوانك الأليف</label>
-       <input type="text" name="petName" required>
+       <label>اسم كلبك</label>
+       <input type="text" name="dogName" required>
       </div>
 
       <div class="form-group">
-       <label>نوع الحيوان</label>
-       <select name="petType" required>
-        <option value="">اختر النوع</option>
-        <option value="dog">كلب</option>
-        <option value="cat">قطة</option>
-        <option value="rabbit">أرنب</option>
-        <option value="other">أخرى</option>
+       <label>سلالة الكلب</label>
+       <select name="dogBreed" required>
+        <option value="">اختر السلالة</option>
+        <option value="small">صغير</option>
+        <option value="medium">متوسط</option>
+        <option value="large">كبير</option>
+        <option value="giant">عملاق</option>
        </select>
       </div>
 
@@ -95,13 +105,13 @@
      </form>
     </div>
 
-    <!-- Contact Information -->
+    
     <div>
      <h2>معلومات التواصل</h2>
      
      <div style="background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%); padding: 2rem; border-radius: 1rem; margin-bottom: 1.5rem;">
       <h3 style="margin-bottom: 1rem;"> العنوان</h3>
-      <p>Sunrise Pet Resort<br>هونج كونج، الصين<br>شارع الحيوانات الأليفة 123</p>
+      <p>Loving Homes<br>هونج كونج، الصين<br>شارع الكلاب 123</p>
      </div>
 
      <div style="background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%); padding: 2rem; border-radius: 1rem; margin-bottom: 1.5rem;">
@@ -118,14 +128,14 @@
 
      <div style="background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%); padding: 2rem; border-radius: 1rem;">
       <h3 style="margin-bottom: 1rem;">ساعات العمل</h3>
-      <p>السبت - الخميس: 8:00 صباحاً - 8:00 مساءً</p>
-      <p>الجمعة: 10:00 صباحاً - 6:00 مساءً</p>
+      <p>السبت - الخميس: 8:00 صباحا - 8:00 مساء</p>
+      <p>الجمعة: 10:00 صباحا - 6:00 مساء</p>
       <p style="margin-top: 0.5rem; color: #999;">الخدمة متاحة 24/7 للطوارئ</p>
      </div>
     </div>
    </div>
 
-   <!-- Social Media -->
+   
    <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%); border-radius: 1rem;">
     <h2 style="margin-bottom: 1.5rem;">تابعنا على وسائل التواصل</h2>
     <div style="display: flex; gap: 1rem; justify-content: center;">
@@ -142,7 +152,7 @@
   <div class="container">
    <div class="footer-content">
     <div class="footer-section">
-     <h3>Sunrise Pet Resort</h3>
+     <h3>Loving Homes</h3>
      <p>فندق كلاب فاخر يوفر أفضل الخدمات والرعاية</p>
     </div>
     <div class="footer-section">
@@ -173,11 +183,10 @@
     </div>
    </div>
    <div class="footer-bottom">
-    <p>&copy; 2024 Sunrise Pet Resort. جميع الحقوق محفوظة.</p>
+    <p>&copy; 2024 Loving Homes. جميع الحقوق محفوظة.</p>
    </div>
   </div>
  </footer>
-
 
  <script src="../js/main.js"></script>
 </body>
