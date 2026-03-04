@@ -4,8 +4,8 @@
 
 :root {
   
-  --primary-orange: #2563EB;
-  --primary-green: #0EA5A4;
+  --primary-orange: #0B5F66;
+  --primary-green: #1D8D95;
   --primary-beige: #F5DEB3;
   
   
@@ -16,8 +16,8 @@
   --shadow-lg: rgba(0, 0, 0, 0.2);
   
   
-  --gradient-warm: linear-gradient(135deg, #2563EB 0%, #38BDF8 100%);
-  --gradient-green: linear-gradient(135deg, #0EA5A4 0%, #14B8A6 100%);
+  --gradient-warm: linear-gradient(135deg, #0B5F66 0%, #49A8AE 100%);
+  --gradient-green: linear-gradient(135deg, #1D8D95 0%, #7AB5AF 100%);
   --gradient-hero: linear-gradient(135deg, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
   
   
@@ -130,7 +130,7 @@ a:hover {
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #C86B00 0%, #E58D00 100%);
+  background: linear-gradient(135deg, #0A4A50 0%, #156B72 100%);
 }
 
 .btn-secondary {
@@ -150,7 +150,7 @@ a:hover {
 }
 
 .btn-green:hover {
-  background: linear-gradient(135deg, #047857 0%, #0EA5A4 100%);
+  background: linear-gradient(135deg, #0F6F76 0%, #1D8D95 100%);
 }
 
 .btn-sm {
@@ -253,7 +253,7 @@ header.scrolled {
 
 .cta-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+  box-shadow: 0 4px 15px rgba(11, 95, 102, 0.32);
 }
 
 .hamburger {
@@ -437,7 +437,7 @@ header.scrolled {
 }
 
 .package-card {
-  background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+  background: linear-gradient(135deg, #EDF6F3 0%, #DDEBE4 100%);
   border: 2px solid var(--primary-orange);
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
