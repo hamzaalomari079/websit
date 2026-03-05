@@ -4,20 +4,20 @@
 
 :root {
   
-  --primary-orange: #2563EB;
-  --primary-green: #0EA5A4;
-  --primary-beige: #F5DEB3;
+  --primary-orange: #0F6A72;
+  --primary-green: #2A9CA3;
+  --primary-beige: #DCD5BF;
   
   
-  --dark-gray: #1F2937;
-  --light-gray: #F3F4F6;
+  --dark-gray: #12383F;
+  --light-gray: #F3F8F7;
   --white: #FFFFFF;
   --shadow: rgba(0, 0, 0, 0.1);
   --shadow-lg: rgba(0, 0, 0, 0.2);
   
   
-  --gradient-warm: linear-gradient(135deg, #2563EB 0%, #38BDF8 100%);
-  --gradient-green: linear-gradient(135deg, #0EA5A4 0%, #14B8A6 100%);
+  --gradient-warm: linear-gradient(135deg, #0F6A72 0%, #2A9CA3 100%);
+  --gradient-green: linear-gradient(135deg, #2A9CA3 0%, #6BB9B2 100%);
   --gradient-hero: linear-gradient(135deg, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
   
   
@@ -106,7 +106,7 @@ a:hover {
 
 .btn {
   display: inline-block;
-  padding: 0.875rem 2rem;
+  padding: 1rem 2.25rem;
   border: none;
   border-radius: var(--radius-md);
   font-family: var(--font-lato);
@@ -130,7 +130,7 @@ a:hover {
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #C86B00 0%, #E58D00 100%);
+  background: linear-gradient(135deg, #0C5560 0%, #167A84 100%);
 }
 
 .btn-secondary {
@@ -150,7 +150,7 @@ a:hover {
 }
 
 .btn-green:hover {
-  background: linear-gradient(135deg, #047857 0%, #0EA5A4 100%);
+  background: linear-gradient(135deg, #1E7C84 0%, #2A9CA3 100%);
 }
 
 .btn-sm {
@@ -159,8 +159,8 @@ a:hover {
 }
 
 .btn-lg {
-  padding: 1rem 2.5rem;
-  font-size: 1.125rem;
+  padding: 1.15rem 2.8rem;
+  font-size: 1.2rem;
 }
 
 header {
@@ -245,15 +245,16 @@ header.scrolled {
 .cta-btn {
   background: var(--gradient-warm);
   color: var(--white);
-  padding: 0.75rem 1.5rem;
+  padding: 0.95rem 1.75rem;
   border-radius: var(--radius-md);
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.05rem;
   transition: all var(--transition-normal);
 }
 
 .cta-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+  box-shadow: 0 4px 15px rgba(15, 106, 114, 0.3);
 }
 
 .hamburger {
@@ -323,6 +324,34 @@ header.scrolled {
   flex-wrap: wrap;
 }
 
+.quick-nav-section {
+  background: linear-gradient(135deg, #eaf5f2 0%, #f7fbfa 100%);
+  border-bottom: 1px solid rgba(15, 106, 114, 0.12);
+}
+
+.quick-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.quick-nav a {
+  background: var(--white);
+  color: var(--dark-gray);
+  border: 1px solid rgba(15, 106, 114, 0.2);
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.quick-nav a:hover {
+  background: var(--gradient-warm);
+  color: var(--white);
+}
+
 @keyframes slideInLeft {
   from {
     opacity: 0;
@@ -381,7 +410,7 @@ header.scrolled {
 .feature-card:hover {
   transform: translateY(-10px);
   border-color: var(--primary-orange);
-  box-shadow: 0 10px 30px rgba(217, 119, 6, 0.2);
+  box-shadow: 0 10px 30px rgba(15, 106, 114, 0.2);
 }
 
 .feature-icon {
@@ -437,7 +466,7 @@ header.scrolled {
 }
 
 .package-card {
-  background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+  background: linear-gradient(135deg, #F4FAF9 0%, #E6F2F0 100%);
   border: 2px solid var(--primary-orange);
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
@@ -448,8 +477,8 @@ header.scrolled {
 .package-card.featured {
   transform: scale(1.05);
   border-color: var(--primary-green);
-  background: linear-gradient(135deg, #F0FDF4 0%, #ECFDF5 100%);
-  box-shadow: 0 10px 30px rgba(5, 150, 105, 0.2);
+  background: linear-gradient(135deg, #F6FBF9 0%, #EAF5F2 100%);
+  box-shadow: 0 10px 30px rgba(42, 156, 163, 0.2);
 }
 
 .package-badge {
@@ -610,7 +639,7 @@ footer {
 .form-group select:focus {
   outline: none;
   border-color: var(--primary-orange);
-  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
+  box-shadow: 0 0 0 3px rgba(15, 106, 114, 0.1);
 }
 
 .form-group textarea {
@@ -650,6 +679,103 @@ footer {
 
 .text-muted { color: #999; }
 .text-dark { color: var(--dark-gray); }
+
+
+.video-showcase-section {
+  background: radial-gradient(circle at 20% 20%, rgba(42, 156, 163, 0.12), transparent 45%), var(--white);
+}
+
+.video-showcase-card {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(145deg, #ffffff 0%, #eef7f6 100%);
+  box-shadow: 0 20px 45px rgba(18, 56, 63, 0.15);
+  overflow: hidden;
+}
+
+.video-glow {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(42, 156, 163, 0.35) 0%, rgba(42, 156, 163, 0) 70%);
+  top: -80px;
+  left: -80px;
+  pointer-events: none;
+}
+
+.brand-video {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  display: block;
+  border: 2px solid rgba(15, 106, 114, 0.2);
+  background: #000;
+}
+
+
+.service-card-image {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+.team-card {
+  text-align: center;
+}
+
+.team-photo {
+  width: 140px;
+  height: 140px;
+  margin: 1.25rem auto 0;
+  display: block;
+  border-radius: 50%;
+  border: 3px solid rgba(15, 106, 114, 0.2);
+  background: #fff;
+}
+
+.compare-section {
+  background: var(--white);
+}
+
+.compare-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 30px rgba(18, 56, 63, 0.12);
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+  text-align: center;
+  background: var(--white);
+}
+
+.compare-table th {
+  background: var(--gradient-warm);
+  color: var(--white);
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.compare-table td {
+  padding: 0.95rem;
+  border-bottom: 1px solid #e4ecea;
+}
+
+.compare-table tbody tr:nth-child(even) {
+  background: #f7fbfa;
+}
+
+.compare-table td:first-child,
+.compare-table th:first-child {
+  text-align: right;
+  font-weight: 600;
+}
+
 
 @media (max-width: 768px) {
   h1 { font-size: 2.5rem; }
@@ -694,8 +820,20 @@ footer {
     font-size: 1rem;
   }
   
-  .hero-buttons {
+   .hero-buttons {
     flex-direction: column;
+  }
+
+  .video-showcase-card {
+    padding: 0.75rem;
+  }
+
+  .quick-nav {
+    justify-content: flex-start;
+  }
+
+  .quick-nav a {
+    font-size: 0.9rem;
   }
   
   .hero-buttons .btn {
