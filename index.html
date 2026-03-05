@@ -12,8 +12,8 @@
  <header>
   <nav class="navbar">
    <a href="index.html" class="logo">
-    <img src="images/logo.png" alt="Sunrise Pet Resort Logo" class="site-logo">
-    <span>Sunrise Pet Resort</span>
+    <img src="images/logo.png" alt="Loving Homes Logo" class="site-logo">
+    <span>Loving Homes</span>
    </a>
    
    <ul class="nav-links">
@@ -40,7 +40,7 @@
  
  <section class="hero">
   <div class="hero-content">
-   <h1>مرحبا بك في Sunrise Pet Resort</h1>
+   <h1>مرحبا بك في Loving Homes</h1>
    <p>فندق كلاب فاخر يوفر أفضل الخدمات والرعاية لحيوانك الأليف في هونج كونج</p>
    <div class="hero-buttons">
     <a href="html/packages.html" class="btn btn-primary btn-lg">استكشف الباقات</a>
@@ -49,15 +49,37 @@
   </div>
  </section>
 
- <section class="section page-cover-section">
+ <section class="quick-nav-section">
   <div class="container">
-   <div class="page-cover">
-    <img src="images/home-main.jpg" alt="صورة صفحة index" loading="lazy">
+   <div class="quick-nav" aria-label="روابط سريعة داخل الصفحة">
+    <a href="#video">🎥 جولة سريعة</a>
+    <a href="#services">🛎️ الخدمات</a>
+    <a href="#packages">💳 الباقات</a>
+    <a href="#packages-compare">📊 مقارنة الباقات</a>
+    <a href="html/contact.html">📞 احجز الآن</a>
    </div>
   </div>
  </section>
 
- 
+
+ <section id="video" class="section video-showcase-section">
+  <div class="container">
+   <div class="section-title">
+    <h2>جولة داخل Loving Homes</h2>
+    <p>شاهد أجواء الفندق والخدمات اليومية في فيديو قصير يعكس تجربة حقيقية مليئة بالحب والعناية.</p>
+   </div>
+
+   <div class="video-showcase-card">
+    <div class="video-glow"></div>
+    <video class="brand-video" controls autoplay muted loop playsinline preload="auto" poster="images/banner-home.jpg">
+     <source src="videos/loving-homes-tour.mp4" type="video/mp4">
+     <source src="videos/loving-homes-tour.webm" type="video/webm">
+     متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+   </div>
+  </div>
+ </section>
+
  <section class="section bg-light">
   <div class="container">
    <div class="section-title">
@@ -94,7 +116,7 @@
  </section>
 
  
- <section class="section">
+ <section id="services" class="section">
   <div class="container">
    <div class="section-title">
     <h2>خدماتنا الرئيسية</h2>
@@ -142,7 +164,7 @@
  </section>
 
  
- <section class="section bg-light">
+ <section id="packages" class="section bg-light">
   <div class="container">
    <div class="section-title">
     <h2>الباقات والأسعار</h2>
@@ -152,7 +174,7 @@
    <div class="features-grid">
     <div class="package-card">
      <h3 class="card-title">الباقة اليومية</h3>
-     <div class="package-price">300 <span style="font-size: 1rem;">درهم</span></div>
+     <div class="package-price">300 <span style="font-size: 1rem;">HK$</span></div>
      <p class="text-muted">يوم واحد</p>
      <ul class="package-features">
       <li>المشي مرتين يوميا</li>
@@ -166,7 +188,7 @@
     <div class="package-card featured">
      <div class="package-badge">الأكثر شهرة</div>
      <h3 class="card-title">الباقة الكلاسيكية</h3>
-     <div class="package-price">800 <span style="font-size: 1rem;">درهم</span></div>
+     <div class="package-price">800 <span style="font-size: 1rem;">HK$</span></div>
      <p class="text-muted">ثلاثة أيام</p>
      <ul class="package-features">
       <li>المشي 3 مرات يوميا</li>
@@ -181,7 +203,7 @@
 
     <div class="package-card">
      <h3 class="card-title">الباقة البريميوم</h3>
-     <div class="package-price">1500 <span style="font-size: 1rem;">درهم</span></div>
+     <div class="package-price">1500 <span style="font-size: 1rem;">HK$</span></div>
      <p class="text-muted">أسبوع واحد</p>
      <ul class="package-features">
       <li>المشي 4 مرات يوميا</li>
@@ -198,8 +220,64 @@
   </div>
  </section>
 
+ <section id="packages-compare" class="section compare-section">
+  <div class="container">
+   <div class="section-title">
+    <h2>مقارنة سريعة بين الباقات</h2>
+    <p>جدول واضح يساعدك على اختيار الباقة الأنسب بسرعة.</p>
+   </div>
+   <div class="compare-table-wrap">
+    <table class="compare-table">
+     <thead>
+      <tr>
+       <th>الميزة</th>
+       <th>اليومية</th>
+       <th>الكلاسيكية</th>
+       <th>البريميوم</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>المشي اليومي</td>
+       <td>مرتين</td>
+       <td>3 مرات</td>
+       <td>4 مرات</td>
+      </tr>
+      <tr>
+       <td>الحلاقة والتنظيف</td>
+       <td>—</td>
+       <td>✓</td>
+       <td>✓</td>
+      </tr>
+      <tr>
+       <td>خدمة التوصيل</td>
+       <td>—</td>
+       <td>—</td>
+       <td>✓</td>
+      </tr>
+      <tr>
+       <td>تحديثات يومية مع صور</td>
+       <td>—</td>
+       <td>—</td>
+       <td>✓</td>
+      </tr>
+      <tr>
+       <td>مراقبة 24/7</td>
+       <td>—</td>
+       <td>✓</td>
+       <td>✓</td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="text-center mt-3">
+    <a href="html/packages.html" class="btn btn-primary btn-lg">شاهد التفاصيل الكاملة للباقات</a>
+   </div>
+  </div>
+ </section>
+
  
- <section class="section" style="background: linear-gradient(135deg, #2563EB 0%, #0EA5A4 100%); color: white;">
+ <section class="section" style="background: var(--gradient-warm); color: white;">
   <div class="container">
    <div class="stats-section" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
     <div>
