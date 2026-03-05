@@ -715,6 +715,17 @@ footer {
 }
 
 
+
+.mini-feature-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  display: block;
+  border: 2px solid rgba(15, 106, 114, 0.2);
+}
+
 .service-card-image {
   width: 100%;
   height: 230px;
