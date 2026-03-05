@@ -685,11 +685,6 @@ footer {
   background: #000;
 }
 
-.video-caption {
-  margin: 1rem 0 0;
-  text-align: center;
-  color: #48656b;
-}
 
 @media (max-width: 768px) {
   h1 { font-size: 2.5rem; }
@@ -740,10 +735,6 @@ footer {
 
   .video-showcase-card {
     padding: 0.75rem;
-  }
-
-  .video-caption {
-    font-size: 0.9rem;
   }
   
   .hero-buttons .btn {
