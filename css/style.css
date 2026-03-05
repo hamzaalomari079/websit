@@ -275,7 +275,7 @@ header.scrolled {
   position: relative;
   height: 600px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
-              url('https://d2xsxph8kpxj0f.cloudfront.net/310519663247499026/dhzDYofDq4uJ2NDVGGGCPe/hero-banner-QMYFJBBqWg57wdN3U2oU3w.webp');
+              url('../images/banner-home.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
