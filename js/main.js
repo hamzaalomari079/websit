@@ -3,6 +3,49 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const navItems = document.querySelectorAll('.nav-links a');
 const languageToggle = document.querySelector('.lang-toggle');
+const navbar = document.querySelector('.navbar');
+
+function applyTheme(theme, toggleButton) {
+  const isDarkMode = theme === 'dark';
+  document.body.classList.toggle('dark-mode', isDarkMode);
+  document.documentElement.style.colorScheme = isDarkMode ? 'dark' : 'light';
+  if (toggleButton) {
+    toggleButton.textContent = isDarkMode ? '☀️' : '🌙';
+    toggleButton.setAttribute('aria-label', isDarkMode ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+}
+
+function initThemeToggle() {
+  if (!navbar) return;
+
+  const themeToggle = document.createElement('button');
+  themeToggle.className = 'theme-toggle';
+  themeToggle.type = 'button';
+
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  applyTheme(savedTheme, themeToggle);
+
+  themeToggle.addEventListener('click', () => {
+    const nextTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+    applyTheme(nextTheme, themeToggle);
+    localStorage.setItem('theme', nextTheme);
+  });
+
+  if (languageToggle) {
+    languageToggle.insertAdjacentElement('afterend', themeToggle);
+    return;
+  }
+
+  const hamburgerButton = navbar.querySelector('.hamburger');
+  if (hamburgerButton) {
+    hamburgerButton.insertAdjacentElement('beforebegin', themeToggle);
+    return;
+  }
+
+  navbar.appendChild(themeToggle);
+}
+
+initThemeToggle();
 
 function getLanguagePath(targetLanguage) {
   const path = window.location.pathname;
