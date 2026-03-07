@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dff4f1"/><stop offset="1" stop-color="#b8e2dd"/></linearGradient></defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <circle cx="400" cy="220" r="84" fill="#2A9CA3" opacity="0.25"/>
+  <rect x="280" y="330" width="240" height="16" rx="8" fill="#0F6A72" opacity="0.45"/>
+  <text x="400" y="235" font-size="42" text-anchor="middle" fill="#0F6A72" font-family="Arial">معرض 2</text>
+</svg>
