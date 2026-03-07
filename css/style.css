@@ -798,14 +798,21 @@ footer {
 
 
 .contact-layout {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 3rem;
   margin-bottom: 3rem;
 }
 
 .contact-form-wrap {
   background: var(--white);
+  flex: 1 1 380px;
+  min-width: 0;
+}
+
+.contact-info-wrap {
+  flex: 1 1 340px;
+  min-width: 0;
 }
 
 .contact-submit-btn {
@@ -849,6 +856,10 @@ footer {
 
 .contact-social-links .btn {
   min-width: 140px;
+}
+
+.contact-layout > * {
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -935,7 +946,7 @@ footer {
   }
 
   .contact-layout {
-    grid-template-columns: 1fr !important;
+    display: block !important;
   }
 }
 
@@ -982,7 +993,7 @@ footer {
   }
 
   .contact-layout {
-    grid-template-columns: 1fr;
+    display: block;
     gap: 2rem;
   }
 
@@ -992,73 +1003,6 @@ footer {
 
   .contact-social-box {
     padding: 1.4rem;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li,
-  .nav-links a,
-  .nav-links .cta-btn {
-    width: 100%;
-  }
-
-  .nav-links a {
-    display: block;
-    padding: 0.8rem 0.9rem;
-    border-radius: 0.65rem;
-  }
-
-  .nav-links a::after {
-    display: none;
-  }
-
-  .nav-links a:hover,
-  .nav-links a.active {
-    background: #eef7f6;
-  }
-
-  .nav-links .cta-btn {
-    text-align: center;
-    margin-top: 0.35rem;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-}
-
-@media (max-width: 1200px) {
-  .navbar {
-    padding: 0.9rem 1rem;
-    position: relative;
-  }
-
-  .logo {
-    font-size: 1.15rem;
-  }
-
-  .site-logo {
-    width: 46px;
-    height: 46px;
-  }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: calc(100% + 0.35rem);
-    left: 1rem;
-    right: auto;
-    width: min(340px, calc(100% - 2rem));
-    background: var(--white);
-    border-radius: var(--radius-md);
-    flex-direction: column;
-    gap: 0;
-    padding: 0.6rem;
-    box-shadow: 0 12px 30px rgba(18, 56, 63, 0.14);
-    border: 1px solid rgba(15, 106, 114, 0.12);
-    z-index: 1100;
   }
 
   .nav-links.active {
