@@ -16,6 +16,22 @@ if (hamburger && navLinks) {
       hamburger.classList.remove('active');
     });
   });
+
+  document.addEventListener('click', (event) => {
+    const clickedInsideMenu = navLinks.contains(event.target);
+    const clickedHamburger = hamburger.contains(event.target);
+    if (!clickedInsideMenu && !clickedHamburger) {
+      navLinks.classList.remove('active');
+      hamburger.classList.remove('active');
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1200) {
+      navLinks.classList.remove('active');
+      hamburger.classList.remove('active');
+    }
+  });
 }
 
 // اضافة ظل للهيدر عند النزول في الصفحة

@@ -108,8 +108,9 @@
   <div class="container" style="text-align: center; max-width: 600px; margin: 0 auto;">
    <h2>اشترك في النشرة البريدية</h2>
    <p>احصل على أحدث النصائح والمقالات مباشرة في بريدك الإلكتروني</p>
-   <form action="https://formspree.io/f/xlgwyaba" method="POST" style="display: flex; gap: 1rem; margin-top: 1rem;">
-    <input type="email" placeholder="بريدك الإلكتروني" required style="flex: 1; padding: 0.875rem; border: 2px solid #ddd; border-radius: 0.5rem; font-family: var(--font-lato);">
+   <form action="https://formspree.io/f/xlgwyaba" method="POST" accept-charset="UTF-8" style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+    <input type="hidden" name="_subject" value="طلب اشتراك جديد من صفحة المدونة">
+    <input type="email" name="email" autocomplete="email" placeholder="بريدك الإلكتروني" required style="flex: 1; min-width: 230px; padding: 0.875rem; border: 2px solid #ddd; border-radius: 0.5rem; font-family: var(--font-lato);">
     <button type="submit" class="btn btn-primary">اشترك</button>
    </form>
   </div>
