@@ -1181,3 +1181,69 @@ footer {
     font-size: 0.74rem;
   }
 }
+
+
+/* تحسينات توافق عامة لكل الصفحات */
+h1, h2, h3, h4, h5, h6, p, a, li {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.container,
+.section,
+.card,
+.feature-card,
+.package-card,
+.hero-content,
+.form-group,
+.navbar,
+.footer-content,
+.compare-table-wrap {
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 1200px) {
+  [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  [style*="display: flex"] {
+    flex-wrap: wrap !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn,
+  .btn-lg,
+  .btn-sm,
+  .cta-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero,
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  [style*="display: flex"] {
+    row-gap: 0.75rem !important;
+    column-gap: 0.75rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  [style*="min-width: 230px"] {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  [style*="height: 250px"],
+  [style*="height: 240px"],
+  [style*="height: 200px"] {
+    height: auto !important;
+    min-height: 150px;
+  }
+}
