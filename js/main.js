@@ -6,22 +6,28 @@ const languageToggle = document.querySelector('.lang-toggle');
 
 function getLanguagePath(targetLanguage) {
   const path = window.location.pathname;
-  const page = path.split('/').pop() || 'index.html';
+  const search = window.location.search || '';
+  const hash = window.location.hash || '';
+  const segments = path.split('/').filter(Boolean);
+  const page = path.endsWith('/') ? 'index.html' : (segments.pop() || 'index.html');
 
+  const inEnglishFolder = segments[segments.length - 1] === 'en';
+  const inArabicFolder = segments[segments.length - 1] === 'html';
+  const baseSegments = [...segments];
+
+  if (inEnglishFolder || inArabicFolder) {
+    baseSegments.pop();
+  }
+
+  let targetSegments = [...baseSegments];
   if (targetLanguage === 'en') {
-    if (path.includes('/html/')) {
-      return `/en/${page}`;
-    }
-    if (path.endsWith('/index.html') || path === '/' || path === '') {
-      return '/en/index.html';
-    }
-    return `/en/${page}`;
+    targetSegments.push('en');
+  } else if (page !== 'index.html') {
+    targetSegments.push('html');
   }
 
-  if (page === 'index.html') {
-    return '/index.html';
-  }
-  return `/html/${page}`;
+  const targetPath = `/${[...targetSegments, page].filter(Boolean).join('/')}`;
+  return `${targetPath}${search}${hash}`;
 }
 
 if (languageToggle) {
