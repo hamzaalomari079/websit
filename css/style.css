@@ -267,6 +267,7 @@ header.scrolled {
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  padding: 0.4rem;
 }
 
 .hamburger span {
@@ -873,6 +874,73 @@ footer {
   
   .footer-content {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 0.9rem 1rem;
+    position: relative;
+  }
+
+  .logo {
+    font-size: 1.15rem;
+  }
+
+  .site-logo {
+    width: 46px;
+    height: 46px;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.35rem);
+    left: 1rem;
+    right: auto;
+    width: min(340px, calc(100% - 2rem));
+    background: var(--white);
+    border-radius: var(--radius-md);
+    flex-direction: column;
+    gap: 0;
+    padding: 0.6rem;
+    box-shadow: 0 12px 30px rgba(18, 56, 63, 0.14);
+    border: 1px solid rgba(15, 106, 114, 0.12);
+    z-index: 1100;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li,
+  .nav-links a,
+  .nav-links .cta-btn {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.8rem 0.9rem;
+    border-radius: 0.65rem;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: #eef7f6;
+  }
+
+  .nav-links .cta-btn {
+    text-align: center;
+    margin-top: 0.35rem;
+  }
+
+  .hamburger {
+    display: flex;
   }
 }
 
