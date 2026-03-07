@@ -2,6 +2,40 @@
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const navItems = document.querySelectorAll('.nav-links a');
+const languageToggle = document.querySelector('.lang-toggle');
+
+function getLanguagePath(targetLanguage) {
+  const path = window.location.pathname;
+  const search = window.location.search || '';
+  const hash = window.location.hash || '';
+  const segments = path.split('/').filter(Boolean);
+  const page = path.endsWith('/') ? 'index.html' : (segments.pop() || 'index.html');
+
+  const inEnglishFolder = segments[segments.length - 1] === 'en';
+  const inArabicFolder = segments[segments.length - 1] === 'html';
+  const baseSegments = [...segments];
+
+  if (inEnglishFolder || inArabicFolder) {
+    baseSegments.pop();
+  }
+
+  let targetSegments = [...baseSegments];
+  if (targetLanguage === 'en') {
+    targetSegments.push('en');
+  } else if (page !== 'index.html') {
+    targetSegments.push('html');
+  }
+
+  const targetPath = `/${[...targetSegments, page].filter(Boolean).join('/')}`;
+  return `${targetPath}${search}${hash}`;
+}
+
+if (languageToggle) {
+  languageToggle.addEventListener('click', () => {
+    const targetLanguage = languageToggle.dataset.langTarget;
+    window.location.href = getLanguagePath(targetLanguage);
+  });
+}
 
 // فتح واغلاق القائمة في الجوال
 if (hamburger && navLinks) {
@@ -160,12 +194,63 @@ function getArabicValidationMessage(field) {
   return '';
 }
 
+function getEnglishValidationMessage(field) {
+  const fieldLabel = field.closest('.form-group')?.querySelector('label')?.textContent?.trim() || 'this field';
+
+  if (field.validity.valueMissing) {
+    return `Please fill out ${fieldLabel}.`;
+  }
+
+  if (field.validity.typeMismatch) {
+    if (field.type === 'email') {
+      return 'Please enter a valid email address.';
+    }
+    if (field.type === 'url') {
+      return 'Please enter a valid URL.';
+    }
+  }
+
+  if (field.validity.patternMismatch) {
+    return `Please enter a valid value in ${fieldLabel}.`;
+  }
+
+  if (field.validity.tooShort) {
+    return `The minimum length for ${fieldLabel} is ${field.minLength} characters.`;
+  }
+
+  if (field.validity.tooLong) {
+    return `The maximum length for ${fieldLabel} is ${field.maxLength} characters.`;
+  }
+
+  if (field.validity.rangeUnderflow) {
+    return `The value in ${fieldLabel} must be at least ${field.min}.`;
+  }
+
+  if (field.validity.rangeOverflow) {
+    return `The value in ${fieldLabel} must not exceed ${field.max}.`;
+  }
+
+  if (field.validity.badInput) {
+    return `Please enter a valid value in ${fieldLabel}.`;
+  }
+
+  return '';
+}
+
+function getValidationMessage(field) {
+  const pageLanguage = document.documentElement.lang || 'ar';
+  if (pageLanguage.startsWith('en')) {
+    return getEnglishValidationMessage(field);
+  }
+  return getArabicValidationMessage(field);
+}
+
 forms.forEach((form) => {
   const fields = form.querySelectorAll('input, select, textarea');
 
   fields.forEach((field) => {
     field.addEventListener('invalid', () => {
-      field.setCustomValidity(getArabicValidationMessage(field));
+      field.setCustomValidity(getValidationMessage(field));
     });
 
     field.addEventListener('input', () => {
