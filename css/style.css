@@ -227,6 +227,22 @@ header.scrolled {
   align-items: center;
 }
 
+.lang-toggle {
+  border: 2px solid var(--primary-orange);
+  background: var(--white);
+  color: var(--primary-orange);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.lang-toggle:hover {
+  background: var(--primary-orange);
+  color: var(--white);
+}
+
 .nav-links a {
   color: var(--dark-gray);
   font-weight: 500;
